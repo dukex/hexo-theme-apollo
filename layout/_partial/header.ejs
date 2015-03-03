@@ -2,9 +2,11 @@
 	<i class="icon-reorder icon-large"></i>
 </div>
 <header id="header">
+  <%- image_tag(config.author_image) %>
 	<h1 class="blog-title">
 		<a href="<%- config.root %>"><%= config.title %></a>
-	</h1>
+  </h1>
+
 	<nav class="nav">
 		<ul>
 			<% for (var i in theme.menu){ %><li><a href="<%- theme.menu[i] %>"><%= i %></a></li><% } %>
@@ -15,4 +17,8 @@
 	<div id="search-form-wrap">
 		<%- search_form({button: '&#xF002;'}) %>
 	</div>
+
+  <p class="about">
+    <%- config.description %>
+  </p>
 </header>
